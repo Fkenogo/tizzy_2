@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Tiizi - Group Workout Accountability</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#ff6a00',
+                50: '#fff7ed',
+                100: '#ffedd5',
+                200: '#fed7aa',
+                300: '#fdba74',
+                400: '#fb923c',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+                800: '#9a3412',
+                900: '#7c2d12',
+              },
+              "background-light": "#f8f7f5",
+              "background-dark": "#23170f",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"],
+              "sans": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1rem",
+              "xl": "1.5rem",
+              "full": "9999px"
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Lexend', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .active-icon {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@0.464.0",
+    "date-fns": "https://esm.sh/date-fns@4.1.0",
+    "firebase/app": "https://esm.sh/firebase@11.1.0/app",
+    "firebase/auth": "https://esm.sh/firebase@11.1.0/auth",
+    "firebase/firestore": "https://esm.sh/firebase@11.1.0/firestore",
+    "firebase/storage": "https://esm.sh/firebase@11.1.0/storage",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client?bundle",
+    "react-dom": "https://esm.sh/react-dom@19.0.0?bundle",
+    "react": "https://esm.sh/react@19.0.0?bundle",
+    "react/": "https://esm.sh/react@19.0.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@7.1.0?bundle",
+    "@tanstack/react-query": "https://esm.sh/@tanstack/react-query@5.62.7?bundle",
+    "@firebase/firestore": "https://esm.sh/@firebase/firestore@^4.11.0",
+    "firebase/": "https://esm.sh/firebase@^12.9.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body class="bg-background-light dark:bg-background-dark text-[#1d130c] dark:text-[#fcfaf8]">
+    <div id="root"></div>
+  </body>
+</html>

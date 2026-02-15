@@ -1,0 +1,7 @@
+{
+  "name": "Tiizi",
+  "description": "Tiizi makes individual workouts a group accountability activity. Join groups, run challenges, and track progress together.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
