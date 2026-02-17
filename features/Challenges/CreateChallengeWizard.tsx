@@ -18,7 +18,8 @@ import {
   Dumbbell,
   Clock,
   Target,
-  Layout
+  Layout,
+  Check
 } from 'lucide-react';
 import { parseISO, isAfter } from 'date-fns';
 
@@ -38,6 +39,8 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
   const [endDate, setEndDate] = useState('');
   const [activities, setActivities] = useState<ChallengeActivity[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [coverImageUrl, setCoverImageUrl] = useState('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800');
+  const [imageFile, setImageFile] = useState<File | null>(null);
 
   // Fetch Exercises for Step 3
   const { data: catalog, isLoading: loadingCatalog } = useQuery({
@@ -51,7 +54,8 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
 
   const filteredCatalog = catalog?.filter(ex => 
     ex.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    ex.category.toLowerCase().includes(searchQuery.toLowerCase())
+    ex.tier_1?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    ex.tier_2?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const createMutation = useMutation({
@@ -65,7 +69,7 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
         type,
         title,
         description,
-        coverImageUrl: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800', 
+        coverImageUrl: coverImageUrl, 
         startDate: Timestamp.fromDate(parseISO(startDate)),
         endDate: Timestamp.fromDate(parseISO(endDate || startDate)),
         participants: [user.uid],
@@ -84,12 +88,20 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
   const addActivity = (ex: CatalogExercise) => {
     if (activities.some(a => a.exerciseId === ex.id)) return;
     const newAct: ChallengeActivity = {
+      activityId: `${ex.id}_${activities.length}`,
+      order: activities.length + 1,
       exerciseId: ex.id,
       exerciseName: ex.name,
-      category: ex.category,
-      metricUnit: ex.metricUnit,
-      targetValue: ex.metricUnit === 'km' ? 5 : 50,
-      order: activities.length
+      tier_1: ex.tier_1,
+      tier_2: ex.tier_2,
+      metricUnit: ex.metric.type === 'reps' ? 'reps' : 
+                  ex.metric.type === 'time' ? 'seconds' : 'km',
+      targetValue: ex.metric.type === 'distance' ? 5 : 50,
+      recommendedRange: {
+        min: ex.metric.type === 'distance' ? 1 : 10,
+        max: ex.metric.type === 'distance' ? 10 : 100,
+        label: ex.metric.type === 'distance' ? '1-10 km' : '10-100 reps'
+      }
     };
     setActivities([...activities, newAct]);
     setSearchQuery('');
@@ -115,7 +127,7 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
     setStep(s => s + 1);
   };
 
-  const progress = (step / 4) * 100;
+  const progress = (step / 5) * 100;
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark font-display flex flex-col">
@@ -127,14 +139,14 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
           </button>
           <div className="text-center flex-1">
             <h1 className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-tighter">Forge Challenge</h1>
-            <p className="text-primary font-bold text-[10px] uppercase tracking-widest mt-0.5">Stage {step} of 4</p>
+            <p className="text-primary font-bold text-[10px] uppercase tracking-widest mt-0.5">Stage {step} of 5</p>
           </div>
           <div className="w-10"></div>
         </div>
         
         <div className="space-y-2">
           <div className="flex justify-between items-center text-[10px] font-black uppercase tracking-widest text-slate-400">
-            <span>{step === 4 ? 'Ready for deployment' : 'Construction Status'}</span>
+            <span>{step === 5 ? 'Ready for deployment' : 'Construction Status'}</span>
             <span className="text-primary">{Math.round(progress)}%</span>
           </div>
           <div className="h-2 w-full bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden">
@@ -143,7 +155,7 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
         </div>
       </header>
 
-      <main className="flex-1 px-6 py-10 overflow-y-auto no-scrollbar pb-32">
+      <main className="flex-1 overflow-y-auto no-scrollbar pb-32">
         {step === 1 && (
           <div className="space-y-12 animate-in fade-in slide-in-from-right duration-300">
             <div className="space-y-2">
@@ -244,7 +256,9 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
               <div className="space-y-1">
                 <p className="font-black text-slate-900 dark:text-white text-sm uppercase tracking-tight">Intelligence Note</p>
                 <p className="text-xs font-medium text-[#a16b45] leading-relaxed">
-                  Daily challenges are best for building habits. Cumulative challenges are great for monthly goals like "100km total".
+                  {type === 'DAILY' && "Daily challenges are best for building habits. Goals reset every 24 hours, perfect for consistency."}
+                  {type === 'WEEKLY' && "Weekly challenges build momentum over 7 days. Great for tracking progress across a full week."}
+                  {type === 'CUMULATIVE' && "Cumulative challenges are great for monthly goals like '100km total' or '5000 push-ups'. Every rep counts!"}
                 </p>
               </div>
             </div>
@@ -254,8 +268,66 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
         {step === 3 && (
           <div className="space-y-12 animate-in fade-in slide-in-from-right duration-300">
             <div className="space-y-2">
+              <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tighter">Hero Image</h2>
+              <p className="text-slate-500 font-medium">Upload a custom image for your challenge hero section.</p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="relative h-64 bg-white dark:bg-slate-800 rounded-[32px] border-2 border-dashed border-slate-100 dark:border-white/5 overflow-hidden group">
+                <img 
+                  src={coverImageUrl} 
+                  alt="Challenge Hero" 
+                  className="size-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="flex items-center justify-between">
+                    <div className="space-y-1">
+                      <p className="text-white font-black text-sm uppercase tracking-tight">Challenge Hero</p>
+                      <p className="text-white/70 text-xs font-medium">Customize your challenge's visual identity</p>
+                    </div>
+                    <label className="bg-primary text-white px-6 py-3 rounded-full font-black text-sm cursor-pointer hover:scale-105 transition-transform shadow-lg shadow-primary/30">
+                      Upload Image
+                      <input 
+                        type="file" 
+                        accept="image/*" 
+                        className="hidden"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0];
+                          if (file) {
+                            setImageFile(file);
+                            setCoverImageUrl(URL.createObjectURL(file));
+                          }
+                        }}
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <button 
+                  onClick={() => setCoverImageUrl('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800')}
+                  className="flex-1 h-16 bg-slate-100 dark:bg-white/5 rounded-[28px] font-black text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors"
+                >
+                  Reset to Default
+                </button>
+                <button 
+                  onClick={() => setStep(step + 1)}
+                  className="flex-1 h-16 bg-primary text-white rounded-[28px] font-black shadow-2xl shadow-primary/30 hover:scale-105 transition-transform"
+                >
+                  Continue to Directives
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {step === 4 && (
+          <div className="space-y-12 animate-in fade-in slide-in-from-right duration-300">
+            <div className="space-y-2">
               <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tighter">Directives</h2>
-              <p className="text-slate-500 font-medium">Select the exercises and set the targets.</p>
+              <p className="text-slate-500 font-medium">Select up to 3 exercises and set the targets.</p>
             </div>
 
             <div className="relative">
@@ -269,39 +341,44 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
               />
             </div>
 
-            {searchQuery && (
-              <div className="bg-white dark:bg-slate-800 rounded-[32px] border border-slate-100 dark:border-white/5 overflow-hidden shadow-2xl max-h-72 overflow-y-auto no-scrollbar ring-8 ring-slate-900/5">
-                {loadingCatalog ? (
-                  <div className="p-8 text-center text-primary font-black uppercase tracking-widest text-xs animate-pulse">Scanning Catalog...</div>
-                ) : filteredCatalog?.length === 0 ? (
-                  <div className="p-8 text-center text-slate-400 font-black uppercase tracking-widest text-[10px]">No records found</div>
-                ) : (
-                  filteredCatalog?.map(ex => (
-                    <button 
-                      key={ex.id} 
-                      onClick={() => addActivity(ex)}
-                      className="w-full px-8 py-5 flex items-center justify-between hover:bg-primary/5 transition-colors border-b border-slate-50 dark:border-white/5 last:border-0 text-left"
-                    >
-                      <div className="flex items-center gap-4">
-                        <div className="size-12 bg-slate-100 dark:bg-white/5 rounded-xl flex items-center justify-center text-primary shadow-inner">
-                          <Dumbbell size={22} />
-                        </div>
-                        <div className="flex flex-col">
-                          <span className="font-black text-slate-800 dark:text-white text-sm uppercase tracking-tight">{ex.name}</span>
-                          <span className="text-[10px] font-black text-[#a16b45] uppercase tracking-widest">{ex.category}</span>
-                        </div>
+            <div className="bg-white dark:bg-slate-800 rounded-[32px] border border-slate-100 dark:border-white/5 overflow-hidden shadow-2xl max-h-72 overflow-y-auto no-scrollbar ring-8 ring-slate-900/5">
+              {loadingCatalog ? (
+                <div className="p-8 text-center text-primary font-black uppercase tracking-widest text-xs animate-pulse">Scanning Catalog...</div>
+              ) : filteredCatalog?.length === 0 ? (
+                <div className="p-8 text-center text-slate-400 font-black uppercase tracking-widest text-[10px]">No records found</div>
+              ) : (
+                filteredCatalog?.map(ex => (
+                  <button 
+                    key={ex.id} 
+                    onClick={() => addActivity(ex)}
+                    disabled={activities.length >= 3}
+                    className={`w-full px-8 py-5 flex items-center justify-between hover:bg-primary/5 transition-colors border-b border-slate-50 dark:border-white/5 last:border-0 text-left ${
+                      activities.some(a => a.exerciseId === ex.id) ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="size-12 bg-slate-100 dark:bg-white/5 rounded-xl flex items-center justify-center text-primary shadow-inner">
+                        <Dumbbell size={22} />
                       </div>
-                      <div className="size-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                      <div className="flex flex-col">
+                        <span className="font-black text-slate-800 dark:text-white text-sm uppercase tracking-tight">{ex.name}</span>
+                        <span className="text-[10px] font-black text-[#a16b45] uppercase tracking-widest">{ex.tier_1 || 'General'}</span>
+                      </div>
+                    </div>
+                    <div className="size-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                      {activities.some(a => a.exerciseId === ex.id) ? (
+                        <Check size={20} strokeWidth={3} />
+                      ) : (
                         <Plus size={20} strokeWidth={3} />
-                      </div>
-                    </button>
-                  ))
-                )}
-              </div>
-            )}
+                      )}
+                    </div>
+                  </button>
+                ))
+              )}
+            </div>
 
             <div className="space-y-6">
-              <label className="text-[11px] font-black uppercase text-slate-500 tracking-[0.2em] ml-2">Active Targets ({activities.length})</label>
+              <label className="text-[11px] font-black uppercase text-slate-500 tracking-[0.2em] ml-2">Active Targets ({activities.length}/3)</label>
               {activities.length === 0 ? (
                 <div className="h-56 border-4 border-dashed border-slate-100 dark:border-white/5 rounded-[48px] flex flex-col items-center justify-center text-slate-400 gap-4 group">
                   <div className="size-16 bg-slate-50 dark:bg-white/5 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -344,7 +421,7 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
           </div>
         )}
 
-        {step === 4 && (
+        {step === 5 && (
           <div className="space-y-12 animate-in fade-in slide-in-from-right duration-300">
             <div className="space-y-2">
               <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tighter">Review & Deploy</h2>
@@ -353,7 +430,7 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
 
             <div className="bg-white dark:bg-slate-800 rounded-[56px] overflow-hidden shadow-2xl border border-slate-100 dark:border-white/5">
               <div className="h-64 relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800" className="size-full object-cover" alt="" />
+                <img src={coverImageUrl} className="size-full object-cover" alt="" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="space-y-2">
@@ -417,7 +494,7 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
           </button>
         )}
         <button 
-          onClick={() => step < 4 ? nextStep() : createMutation.mutate()}
+          onClick={() => step < 5 ? nextStep() : createMutation.mutate()}
           disabled={
             (step === 1 && !isValidStep1) || 
             (step === 2 && !isValidStep2) || 
@@ -426,7 +503,7 @@ const CreateChallengeWizard: React.FC<CreateChallengeWizardProps> = ({ user }) =
           }
           className={`flex-[2] h-20 bg-primary text-white rounded-[32px] font-black text-xl shadow-2xl shadow-primary/30 flex items-center justify-center gap-3 active:scale-95 transition-all disabled:opacity-30 disabled:grayscale`}
         >
-          {step === 4 ? (
+          {step === 5 ? (
             <>{createMutation.isPending ? 'Syncing...' : 'Initiate Launch'} <Rocket size={24} className="fill-white" /></>
           ) : (
             <>Advance Phase <ChevronRight size={24} strokeWidth={3} /></>

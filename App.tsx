@@ -21,11 +21,12 @@ import GroupDetailScreen from './features/Groups/GroupDetailScreen';
 import ProfileScreen from './features/Profile/ProfileScreen';
 import ExerciseLibraryScreen from './features/Exercises/ExerciseLibraryScreen';
 import ExerciseDetailScreen from './features/Exercises/ExerciseDetailScreen';
-import CreateChallengeWizard from './features/Challenges/CreateChallengeWizard';
+import CreateChallengeForm from './features/Challenges/CreateChallengeForm';
 import LogWorkoutScreen from './features/Challenges/LogWorkoutScreen';
 import LeaderboardScreen from './features/Leaderboards/LeaderboardScreen';
 import JoinGroupScreen from './features/Groups/JoinGroupScreen';
 import MyChallengesScreen from './features/Challenges/MyChallengesScreen';
+import SuggestedChallengesScreen from './features/Challenges/SuggestedChallengesScreen';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -60,13 +61,25 @@ const App: React.FC = () => {
       unsubscribeDoc = onSnapshot(userRef, async (snap) => {
         if (snap.exists()) {
           setUser(snap.data() as UserDoc);
-        } else {
+          } else {
           const newUser: UserDoc = {
             uid: fbUser.uid,
             displayName: `Tiizi User ${fbUser.uid.slice(0, 4)}`,
             createdAt: serverTimestamp() as any,
             lastActiveAt: serverTimestamp() as any,
-            stats: { xp: 0, level: 1, coins: 0, totalLogs: 0, streak: 0 },
+            stats: { 
+              totalWorkouts: 0,
+              totalSteps: 0,
+              totalDistance: 0,
+              totalCalories: 0,
+              totalActiveMinutes: 0,
+              longestStreak: 0,
+              currentStreak: 0,
+              xp: 0,
+              level: 1,
+              coins: 0,
+              totalLogs: 0
+            },
             onboardingCompleted: false
           };
           try {
@@ -125,10 +138,11 @@ const App: React.FC = () => {
               <Route path="/join" element={<JoinGroupScreen user={user} />} />
               <Route path="/join/:groupId" element={<JoinGroupScreen user={user} />} />
               <Route path="/challenges" element={<MyChallengesScreen />} />
+              <Route path="/suggested-challenges" element={<SuggestedChallengesScreen />} />
               <Route path="/profile" element={<ProfileScreen user={user} />} />
               <Route path="/exercises" element={<ExerciseLibraryScreen />} />
               <Route path="/exercises/:exerciseId" element={<ExerciseDetailScreen user={user} />} />
-              <Route path="/create-challenge/:groupId" element={<CreateChallengeWizard user={user} />} />
+              <Route path="/create-challenge/:groupId" element={<CreateChallengeForm user={user} />} />
               <Route path="/log/:challengeId" element={<LogWorkoutScreen user={user} />} />
               <Route path="/leaderboard/:challengeId" element={<LeaderboardScreen />} />
               <Route path="*" element={<Navigate to="/" replace />} />

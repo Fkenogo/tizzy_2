@@ -2,16 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- PWA Mobile Optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#ff6b00">
+    <meta name="format-detection" content="telephone=no">
     <title>Tiizi - Group Workout Accountability</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script>
       tailwind.config = {
+        content: ['./src/**/*.{js,jsx,ts,tsx}'],
         darkMode: "class",
         theme: {
           extend: {
+            maxWidth: {
+              'mobile': '420px',  // Mobile-first max-width
+              'tablet': '768px',
+              'desktop': '1200px',
+            },
+            screens: {
+              'xs': '360px',      // Small phones
+              'sm': '375px',      // iPhone SE
+              'md': '420px',      // iPhone 12/13
+              'lg': '768px',      // Tablets
+              'xl': '1024px',     // Desktop
+            },
             colors: {
               primary: {
                 DEFAULT: '#ff6a00',
@@ -34,38 +53,252 @@
               "sans": ["Lexend", "sans-serif"]
             },
             borderRadius: {
-              "DEFAULT": "0.5rem",
-              "lg": "1rem",
-              "xl": "1.5rem",
+              "sm": "0.5rem",     // 8px
+              "md": "0.75rem",    // 12px
+              "lg": "1rem",       // 16px
+              "xl": "1.5rem",     // 24px
+              "2xl": "2rem",      // 32px
               "full": "9999px"
             },
+            spacing: {
+              'safe-top': 'env(safe-area-inset-top)',
+              'safe-bottom': 'env(safe-area-inset-bottom)',
+              'safe-left': 'env(safe-area-inset-left)',
+              'safe-right': 'env(safe-area-inset-right)',
+              'mobile-padding': 'clamp(14px, 4vw, 20px)',  // Responsive padding
+            }
           }
-        }
+        },
+        plugins: [],
       }
     </script>
     <style>
-      body {
-        font-family: 'Lexend', sans-serif;
-        -webkit-tap-highlight-color: transparent;
+      /* MOBILE-FIRST RESPONSIVE DESIGN */
+      :root {
+        --nav-height: 72px;
+        --fab-size: 64px;
+        --safe-top: env(safe-area-inset-top, 0px);
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+        --safe-left: env(safe-area-inset-left, 0px);
+        --safe-right: env(safe-area-inset-right, 0px);
+        
+        /* Mobile-first spacing scale */
+        --spacing-xs: 8px;
+        --spacing-sm: 12px;
+        --spacing-md: 16px;
+        --spacing-lg: 20px;
+        --spacing-xl: 24px;
+        --spacing-2xl: 32px;
+        
+        /* Typography scale */
+        --text-xs: 0.75rem;    /* 12px */
+        --text-sm: 0.875rem;   /* 14px */
+        --text-base: 1rem;     /* 16px */
+        --text-lg: 1.125rem;   /* 18px */
+        --text-xl: 1.25rem;    /* 20px */
+        --text-2xl: 1.5rem;    /* 24px */
+        --text-3xl: 1.875rem;  /* 30px */
+        --text-4xl: 2.25rem;   /* 36px */
       }
+
+      /* Base mobile-first styles */
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Lexend', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: var(--background-light);
+        color: var(--text-color);
+      }
+
+      #root {
+        height: 100%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Mobile-first container */
+      .mobile-container {
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 0 clamp(14px, 4vw, 20px);
+      }
+
+      /* Image constraints */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Prevent horizontal overflow */
+      .overflow-safe {
+        overflow-x: hidden;
+      }
+
+      /* iOS Safe Area Support */
+      .safe-area-top {
+        padding-top: max(var(--safe-top), 16px);
+      }
+      
+      .safe-area-bottom {
+        padding-bottom: max(var(--safe-bottom), 16px);
+      }
+      
+      .safe-area-sides {
+        padding-left: max(var(--safe-left), 0px);
+        padding-right: max(var(--safe-right), 0px);
+      }
+
+      /* Typography scale */
+      .text-xs { font-size: var(--text-xs); }
+      .text-sm { font-size: var(--text-sm); }
+      .text-base { font-size: var(--text-base); }
+      .text-lg { font-size: var(--text-lg); }
+      .text-xl { font-size: var(--text-xl); }
+      .text-2xl { font-size: var(--text-2xl); }
+      .text-3xl { font-size: var(--text-3xl); }
+      .text-4xl { font-size: var(--text-4xl); }
+
+      /* Spacing scale */
+      .p-mobile { padding: clamp(14px, 4vw, 20px); }
+      .px-mobile { padding-left: clamp(14px, 4vw, 20px); padding-right: clamp(14px, 4vw, 20px); }
+      .py-mobile { padding-top: clamp(14px, 4vw, 20px); padding-bottom: clamp(14px, 4vw, 20px); }
+      
+      .m-xs { margin: var(--spacing-xs); }
+      .m-sm { margin: var(--spacing-sm); }
+      .m-md { margin: var(--spacing-md); }
+      .m-lg { margin: var(--spacing-lg); }
+      .m-xl { margin: var(--spacing-xl); }
+      .m-2xl { margin: var(--spacing-2xl); }
+      
+      .p-xs { padding: var(--spacing-xs); }
+      .p-sm { padding: var(--spacing-sm); }
+      .p-md { padding: var(--spacing-md); }
+      .p-lg { padding: var(--spacing-lg); }
+      .p-xl { padding: var(--spacing-xl); }
+      .p-2xl { padding: var(--spacing-2xl); }
+
+      /* Card styles */
+      .card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      /* Button styles */
+      .btn {
+        min-height: 44px;
+        border-radius: 12px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      
+      .btn-primary {
+        background: var(--primary-color);
+        color: white;
+      }
+      
+      .btn-secondary {
+        background: #f3f4f6;
+        color: #374151;
+      }
+      
+      .btn-ghost {
+        background: transparent;
+        color: #374151;
+      }
+
+      /* Touch targets */
+      .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Material symbols */
       .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
+      
       .active-icon {
         font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
-      .safe-bottom {
-        padding-bottom: env(safe-area-inset-bottom);
-      }
+
+      /* Scrollbar styling */
       ::-webkit-scrollbar {
         width: 4px;
       }
+      
       ::-webkit-scrollbar-track {
         background: transparent;
       }
+      
       ::-webkit-scrollbar-thumb {
         background: #f1f1f1;
         border-radius: 10px;
+      }
+
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-light: #111827;
+          --text-color: #f9fafb;
+          --primary-color: #f97316;
+        }
+        
+        .card {
+          background: #1f2937;
+          border-color: #374151;
+        }
+        
+        .btn-secondary {
+          background: #374151;
+          color: #f9fafb;
+        }
+        
+        .btn-ghost {
+          background: transparent;
+          color: #f9fafb;
+        }
+      }
+
+      /* Tablet and desktop adjustments */
+      @media (min-width: 768px) {
+        :root {
+          --spacing-lg: 24px;
+          --spacing-xl: 32px;
+          --spacing-2xl: 40px;
+        }
+        
+        .mobile-container {
+          padding: 0 24px;
+        }
+      }
+
+      /* Prevent overscroll bounce */
+      @supports (-webkit-touch-callout: none) {
+        body {
+          -webkit-overflow-scrolling: touch;
+        }
       }
     </style>
   <script type="importmap">
@@ -89,6 +322,7 @@
   }
 }
 </script>
+  <script type="module" src="/index.tsx"></script>
 </head>
   <body class="bg-background-light dark:bg-background-dark text-[#1d130c] dark:text-[#fcfaf8]">
     <div id="root"></div>

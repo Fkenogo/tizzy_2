@@ -1,0 +1,3029 @@
+{
+    "database_info": {
+        "name": "Comprehensive Exercise Library",
+        "version": "1.0",
+        "total_exercises": 133,
+        "last_updated": "2026-02-16",
+        "structure": {
+            "tier_1": "Body Region (Upper Body, Lower Body, Core, Full Body)",
+            "tier_2": "Primary Focus (Strength, Cardio, Mobility & Flexibility, Balance & Stability, Power & Explosiveness)",
+            "tier_3": "Specific Exercise Name"
+        }
+    },
+    "exercises": [
+        {
+            "id": 1,
+            "name": "Plank (Forearm Plank)",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Lower Back",
+                    "Shoulders",
+                    "Glutes"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "name": "Side Plank Left",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Hip Abductors",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "name": "Side Plank Right",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Hip Abductors",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "name": "Kneeling Side Plank Left",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "name": "Kneeling Side Plank Right",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "name": "Leg Up Side Plank Left",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Hip Abductors",
+                    "Glutes"
+                ],
+                "difficulty_level": "Advanced",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "name": "Leg Up Side Plank Right",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Hip Abductors",
+                    "Glutes"
+                ],
+                "difficulty_level": "Advanced",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "name": "Left Side Plank with Arm Raised",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "name": "Right Side Plank with Arm Raised",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 10,
+            "name": "Side Plank with Left Leg Raised",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Hip Abductors",
+                    "Glutes"
+                ],
+                "difficulty_level": "Advanced",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 11,
+            "name": "Side Plank with Right Leg Raised",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Hip Abductors",
+                    "Glutes"
+                ],
+                "difficulty_level": "Advanced",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "name": "Knee Plank",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 13,
+            "name": "Straight Arm Knee Plank",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Shoulders",
+                    "Chest"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 14,
+            "name": "Straight Arm Plank (High Plank)",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Shoulders",
+                    "Chest",
+                    "Obliques"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 15,
+            "name": "Wide Arm Plank",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Chest",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 16,
+            "name": "Plank with Left Arm Lift",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds) or Reps",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 17,
+            "name": "Plank with Right Arm Lift",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds) or Reps",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 18,
+            "name": "Single Left Leg Plank",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Glutes",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 19,
+            "name": "Single Right Leg Plank",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Glutes",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 20,
+            "name": "Leg Raised Plank Left",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 21,
+            "name": "Leg Raised Plank Right",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 22,
+            "name": "Diagonal Plank Hold Left",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Glutes",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Advanced",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 23,
+            "name": "Diagonal Plank Hold Right",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Glutes",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Advanced",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 24,
+            "name": "Plank and Reach Left",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 25,
+            "name": "Plank and Reach Right",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 26,
+            "name": "Reverse Plank",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Lower Back",
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 27,
+            "name": "Reverse Plank with Left Leg Raised",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Glutes",
+                    "Hamstrings",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Advanced",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 28,
+            "name": "Reverse Plank with Right Leg Raised",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Glutes",
+                    "Hamstrings",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Advanced",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 29,
+            "name": "Abdominal Crunches",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 30,
+            "name": "Reverse Crunches",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Lower Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 31,
+            "name": "Bicycle Crunches",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 32,
+            "name": "Russian Twist",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 33,
+            "name": "Crossover Crunch",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 34,
+            "name": "Oblique Crunch Reach",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 35,
+            "name": "Reclined Oblique Twist",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 36,
+            "name": "Sit-Ups",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 37,
+            "name": "Heel Touch",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Abs"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 38,
+            "name": "Toe Tap",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Lower Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 39,
+            "name": "Dead Bug",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 40,
+            "name": "Bird Dog",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Lower Back",
+                    "Glutes"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 41,
+            "name": "Mountain Climber",
+            "tier_1": "Core",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Hip Flexors",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 42,
+            "name": "Slow Mountain Climber",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Hip Flexors",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 43,
+            "name": "Leg Raises",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Lower Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 44,
+            "name": "Single Leg Drops",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Lower Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 45,
+            "name": "Kick Crunch",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 46,
+            "name": "High Knee with Twist",
+            "tier_1": "Core",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 47,
+            "name": "Standing Bicycle Crunches",
+            "tier_1": "Core",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Obliques"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 48,
+            "name": "Squats",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Hamstrings",
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 49,
+            "name": "Lunges",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 50,
+            "name": "Side Lunges",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Adductors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 51,
+            "name": "Wall Sit",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Wall"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 52,
+            "name": "Butt Bridge",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Hamstrings",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 53,
+            "name": "Step-Up Onto Chair",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Chair or Step"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 54,
+            "name": "Calf Raises",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 55,
+            "name": "Glute Kickbacks",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 56,
+            "name": "Donkey Kicks",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 57,
+            "name": "Fire Hydrants",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Hip Abductors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 58,
+            "name": "Bulgarian Split Squats",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bench or Chair"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 59,
+            "name": "Reverse Lunges",
+            "tier_1": "Lower Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 60,
+            "name": "Jumping Jacks",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Full Body"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 61,
+            "name": "High Stepping",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Flexors",
+                    "Quadriceps",
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 62,
+            "name": "Butt Kicks",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Hamstrings",
+                    "Glutes",
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 63,
+            "name": "Skater Jump",
+            "tier_1": "Full Body",
+            "tier_2": "Power & Explosiveness",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Quadriceps",
+                    "Calves"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Power",
+                    "Athletic Performance",
+                    "Explosiveness"
+                ]
+            }
+        },
+        {
+            "id": 64,
+            "name": "Side Hop",
+            "tier_1": "Full Body",
+            "tier_2": "Power & Explosiveness",
+            "tags": {
+                "muscles_targeted": [
+                    "Calves",
+                    "Quadriceps",
+                    "Hip Abductors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Power",
+                    "Athletic Performance",
+                    "Explosiveness"
+                ]
+            }
+        },
+        {
+            "id": 65,
+            "name": "Burpees",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Full Body"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 66,
+            "name": "Skipping Without Rope",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Calves",
+                    "Quadriceps"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 67,
+            "name": "Side Step Jacks",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Abductors",
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 68,
+            "name": "Jump Squats",
+            "tier_1": "Full Body",
+            "tier_2": "Power & Explosiveness",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Calves"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Power",
+                    "Athletic Performance",
+                    "Explosiveness"
+                ]
+            }
+        },
+        {
+            "id": 69,
+            "name": "Running",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Legs",
+                    "Cardiovascular System"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "None"
+                ],
+                "metric": "Time or Distance",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 70,
+            "name": "Walking",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Legs",
+                    "Cardiovascular System"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "None"
+                ],
+                "metric": "Time or Distance",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 71,
+            "name": "Push-Ups",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Shoulders",
+                    "Core"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 72,
+            "name": "Modified Push-Up",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 73,
+            "name": "Push Up Hold",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Shoulders",
+                    "Core"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 74,
+            "name": "Modified Push-Up Low Hold",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 75,
+            "name": "Push-Up & Rotation",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Shoulders",
+                    "Obliques"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 76,
+            "name": "Inchworms",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hamstrings",
+                    "Shoulders",
+                    "Core"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 77,
+            "name": "Triceps Dips",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Triceps",
+                    "Shoulders",
+                    "Chest"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Chair or Bench"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 78,
+            "name": "Alternating Hooks",
+            "tier_1": "Upper Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Shoulders",
+                    "Arms",
+                    "Core"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 79,
+            "name": "Cross Touch and Reach",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Core",
+                    "Shoulders",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 80,
+            "name": "Plank Shoulder Taps",
+            "tier_1": "Core",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Shoulders",
+                    "Obliques"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 81,
+            "name": "Hollow Body Hold",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 82,
+            "name": "Superman Hold",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Lower Back",
+                    "Glutes",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 83,
+            "name": "Plank Jacks",
+            "tier_1": "Core",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Shoulders",
+                    "Hip Abductors"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 84,
+            "name": "Swimmer & Superman",
+            "tier_1": "Core",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Lower Back",
+                    "Glutes",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 85,
+            "name": "Squat Reach Ups",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 86,
+            "name": "Cobra Stretch",
+            "tier_1": "Core",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Abs",
+                    "Hip Flexors",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 87,
+            "name": "Child's Pose",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Back",
+                    "Shoulders",
+                    "Hips"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 88,
+            "name": "Cat Cow",
+            "tier_1": "Core",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Spine",
+                    "Abs",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 89,
+            "name": "Seated Butterfly",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Adductors",
+                    "Groin"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 90,
+            "name": "Lying Butterfly",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Adductors",
+                    "Groin"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 91,
+            "name": "Standing Side Bend",
+            "tier_1": "Core",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Intercostals"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 92,
+            "name": "Forward Bend",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hamstrings",
+                    "Lower Back",
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 93,
+            "name": "Kneeling Lunge Stretch (L/R)",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Flexors",
+                    "Quadriceps"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 94,
+            "name": "Calf Stretch (L/R)",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Calves",
+                    "Achilles"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Wall (optional)"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 95,
+            "name": "Quad Stretch (L/R)",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Hip Flexors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 96,
+            "name": "Biceps Stretch (L/R)",
+            "tier_1": "Upper Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Biceps",
+                    "Forearms"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Wall"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 97,
+            "name": "Triceps Stretch (L/R)",
+            "tier_1": "Upper Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Triceps",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 98,
+            "name": "Chest Stretch",
+            "tier_1": "Upper Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Doorway or Wall"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 99,
+            "name": "Shoulder Stretch",
+            "tier_1": "Upper Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Shoulders",
+                    "Upper Back"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 100,
+            "name": "Lying Twist (L/R)",
+            "tier_1": "Core",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Lower Back",
+                    "Hips"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 101,
+            "name": "Lumbar Twist (L/R)",
+            "tier_1": "Core",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Lower Back",
+                    "Obliques",
+                    "Hips"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 102,
+            "name": "Knee to Chest (L/R)",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 103,
+            "name": "Double Knees to Chest",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 104,
+            "name": "Glute Stretch (L/R)",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Hip Rotators"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 105,
+            "name": "Sitting Hamstring Stretch (L/R)",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hamstrings",
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 106,
+            "name": "Standing Knee to Chest",
+            "tier_1": "Lower Body",
+            "tier_2": "Balance & Stability",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Hip Flexors",
+                    "Core"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Balance",
+                    "Core Stability",
+                    "Functional Fitness"
+                ]
+            }
+        },
+        {
+            "id": 107,
+            "name": "Legs Up The Wall",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hamstrings",
+                    "Lower Back"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Wall"
+                ],
+                "metric": "Time (minutes)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 108,
+            "name": "Triangle Pose (L/R)",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hamstrings",
+                    "Hip Adductors",
+                    "Obliques"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 109,
+            "name": "Adductor Stretch Standing",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Adductors",
+                    "Groin"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 110,
+            "name": "Single Leg Hip Rotation",
+            "tier_1": "Lower Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Rotators",
+                    "Glutes"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps per side",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 111,
+            "name": "Bent Leg Twist",
+            "tier_1": "Core",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Obliques",
+                    "Lower Back",
+                    "Hips"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds per side)",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 112,
+            "name": "Bear Crawl Hold",
+            "tier_1": "Full Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Core",
+                    "Shoulders",
+                    "Quadriceps"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 113,
+            "name": "Crab Walk",
+            "tier_1": "Full Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Triceps",
+                    "Glutes",
+                    "Core"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time or Distance",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 114,
+            "name": "Jumping Jacks",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Full Body"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 115,
+            "name": "High Stepping",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Flexors",
+                    "Quadriceps"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 116,
+            "name": "Butt Kicks",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Hamstrings",
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 117,
+            "name": "Skater Jump",
+            "tier_1": "Full Body",
+            "tier_2": "Power & Explosiveness",
+            "tags": {
+                "muscles_targeted": [
+                    "Glutes",
+                    "Quadriceps"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Power",
+                    "Athletic Performance",
+                    "Explosiveness"
+                ]
+            }
+        },
+        {
+            "id": 118,
+            "name": "Side Hop",
+            "tier_1": "Full Body",
+            "tier_2": "Power & Explosiveness",
+            "tags": {
+                "muscles_targeted": [
+                    "Calves",
+                    "Hip Abductors"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Power",
+                    "Athletic Performance",
+                    "Explosiveness"
+                ]
+            }
+        },
+        {
+            "id": 119,
+            "name": "Burpees",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Full Body"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 120,
+            "name": "Skipping Without Rope",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Calves",
+                    "Quadriceps"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 121,
+            "name": "Side Step Jacks",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Hip Abductors",
+                    "Calves"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 122,
+            "name": "Jump Squats",
+            "tier_1": "Lower Body",
+            "tier_2": "Power & Explosiveness",
+            "tags": {
+                "muscles_targeted": [
+                    "Quadriceps",
+                    "Glutes",
+                    "Calves"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Power",
+                    "Athletic Performance",
+                    "Explosiveness"
+                ]
+            }
+        },
+        {
+            "id": 123,
+            "name": "Running",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Legs",
+                    "Cardiovascular System"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "None"
+                ],
+                "metric": "Time or Distance",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 124,
+            "name": "Walking",
+            "tier_1": "Full Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Legs",
+                    "Cardiovascular System"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "None"
+                ],
+                "metric": "Time or Distance",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 125,
+            "name": "Push-Ups",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 126,
+            "name": "Modified Push-Up",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 127,
+            "name": "Push Up Hold",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 128,
+            "name": "Modified Push-Up Low Hold",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Time (seconds)",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 129,
+            "name": "Push-Up & Rotation",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Chest",
+                    "Triceps",
+                    "Obliques"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 130,
+            "name": "Inchworms",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Hamstrings",
+                    "Shoulders",
+                    "Core"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        },
+        {
+            "id": 131,
+            "name": "Triceps Dips",
+            "tier_1": "Upper Body",
+            "tier_2": "Strength",
+            "tags": {
+                "muscles_targeted": [
+                    "Triceps",
+                    "Shoulders"
+                ],
+                "difficulty_level": "Intermediate",
+                "equipment": [
+                    "Chair or Bench"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Strength",
+                    "Hypertrophy",
+                    "Endurance"
+                ]
+            }
+        },
+        {
+            "id": 132,
+            "name": "Alternating Hooks",
+            "tier_1": "Upper Body",
+            "tier_2": "Cardio",
+            "tags": {
+                "muscles_targeted": [
+                    "Shoulders",
+                    "Arms"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps or Time",
+                "training_goals": [
+                    "Cardiovascular Endurance",
+                    "Weight Loss",
+                    "Athletic Performance"
+                ]
+            }
+        },
+        {
+            "id": 133,
+            "name": "Cross Touch and Reach",
+            "tier_1": "Full Body",
+            "tier_2": "Mobility & Flexibility",
+            "tags": {
+                "muscles_targeted": [
+                    "Core",
+                    "Hamstrings"
+                ],
+                "difficulty_level": "Beginner",
+                "equipment": [
+                    "Bodyweight"
+                ],
+                "metric": "Reps",
+                "training_goals": [
+                    "Flexibility",
+                    "Injury Prevention",
+                    "Rehabilitation"
+                ]
+            }
+        }
+    ]
+}

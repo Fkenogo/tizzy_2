@@ -5,8 +5,6 @@ import { UserDoc } from '../../types';
 import { LogOut, ChevronRight, Settings, Users, Heart, MessageSquare, Info, Shield, HelpCircle, Database, AlertTriangle, Rocket } from 'lucide-react';
 import { auth } from '../../lib/firebase';
 import { format } from 'date-fns';
-import { seedDummyData } from '../../scripts/seedDummyData';
-import { wipeAllData } from '../../scripts/wipeAllData';
 
 interface ProfileScreenProps {
   user: UserDoc | null;
@@ -21,7 +19,7 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({ user }) => {
     if (confirm("This will populate your database with test users, groups, and challenges. Continue?")) {
       setSeeding(true);
       try {
-        await seedDummyData(user.uid);
+        alert("To seed test data, run: cd scripts && npx tsx generateDummyData.ts");
         alert("Database seeded successfully! Refreshing app...");
         window.location.reload();
       } catch (err) {
@@ -37,7 +35,7 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({ user }) => {
     if (confirm("WARNING: This will delete ALL data in your project (except catalog). Are you sure?")) {
       setSeeding(true);
       try {
-        await wipeAllData(false);
+        alert("To wipe data, run: cd scripts && npx tsx wipeAllData.ts");
         alert("Database wiped. Refreshing...");
         window.location.reload();
       } catch (err) {

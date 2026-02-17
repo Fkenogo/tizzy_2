@@ -1,19 +1,40 @@
-import { db } from '../lib/firebase';
-// Fix: Use @firebase/firestore for named exports to resolve build errors
-import { collection, getDocs, deleteDoc, doc } from '@firebase/firestore';
+import { db } from '../src/config/firebase';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 
-export const wipeAllData = async (wipeExercises = false) => {
-  const collections = ['groups', 'challenges', 'posts', 'donations', 'users'];
-  if (wipeExercises) collections.push('catalogExercises');
+async function wipeAllData() {
+  console.log('🧹 Starting complete data wipe...');
+  
+  try {
+    // Collections to wipe
+    const collections = [
+      'users',
+      'groups', 
+      'challenges',
+      'posts',
+      'catalogExercises',
+      'onboardingData'
+    ];
 
-  console.log(`Wiping collections: ${collections.join(', ')}...`);
+    for (const collectionName of collections) {
+      console.log(`🗑️  Wiping ${collectionName}...`);
+      const snap = await getDocs(collection(db, collectionName));
+      let count = 0;
+      
+      for (const docSnap of snap.docs) {
+        await deleteDoc(doc(db, collectionName, docSnap.id));
+        count++;
+      }
+      
+      console.log(`✅ Wiped ${count} documents from ${collectionName}`);
+    }
 
-  for (const collName of collections) {
-    const snap = await getDocs(collection(db, collName));
-    const deletePromises = snap.docs.map(d => deleteDoc(doc(db, collName, d.id)));
-    await Promise.all(deletePromises);
-    console.log(`Cleared: ${collName}`);
+    console.log('🎉 All data wiped successfully!');
+    
+  } catch (error) {
+    console.error('❌ Wipe failed:', error);
+    throw error;
   }
+}
 
-  console.log('Wipe complete!');
-};
+// Run the wipe script
+wipeAllData();

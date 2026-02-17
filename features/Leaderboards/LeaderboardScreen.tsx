@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 // Fix: Use @firebase/firestore for named exports to resolve build errors
-import { doc, getDoc, collection, getDocs } from '@firebase/firestore';
+import { doc, getDoc, collection, getDocs, query, where, orderBy, limit, Timestamp } from '@firebase/firestore';
 import { db } from '../../lib/firebase';
 import { ChallengeDoc, ChallengeLog, UserDoc } from '../../types';
 import { ChevronLeft, Share2, Clock, Trophy, Target, Activity, Crown } from 'lucide-react';
@@ -29,14 +29,26 @@ const LeaderboardScreen: React.FC = () => {
     }
   });
 
-  // 2. Fetch All Logs for this challenge
-  const { data: logs, isLoading: loadingLogs } = useQuery<ChallengeLog[]>({
+  // 2. Fetch Scoped Logs for this challenge (Performance Optimized)
+  const { data: recentLogs, isLoading: loadingLogs } = useQuery<ChallengeLog[]>({
     queryKey: ['challengeLogs', challengeId],
     queryFn: async () => {
-      const snap = await getDocs(collection(db, `challenges/${challengeId}/logs`));
+      if (!challengeId) return [];
+      const twoWeeksAgo = new Date();
+      twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+      
+      const q = query(
+        collection(db, 'challenges', challengeId, 'logs'),
+        where('createdAt', '>=', Timestamp.fromDate(twoWeeksAgo)),
+        orderBy('createdAt', 'desc'),
+        limit(1000) // Reasonable limit for computation
+      );
+      const snap = await getDocs(q);
       return snap.docs.map(d => ({ id: d.id, ...d.data() } as ChallengeLog));
     },
-    enabled: !!challengeId
+    enabled: !!challengeId,
+    staleTime: 2 * 60 * 1000, // 2 minutes
+    cacheTime: 5 * 60 * 1000, // 5 minutes
   });
 
   // 3. Fetch User Profiles for participants

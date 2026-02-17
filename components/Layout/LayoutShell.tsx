@@ -47,20 +47,22 @@ const LayoutShell: React.FC<LayoutShellProps> = ({ children, user }) => {
     <div className="relative min-h-screen flex flex-col bg-background-light dark:bg-background-dark overflow-x-hidden font-display">
       {/* Universal Top Bar */}
       {!hideGlobalHeader && (
-        <header className="sticky top-0 z-40 flex items-center justify-between px-6 py-4 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/5 shadow-sm">
-          <Link to="/" className="text-2xl font-black tracking-tighter text-primary">Tiizi</Link>
-          <div className="flex items-center gap-2">
-            <button className="relative p-2.5 rounded-full hover:bg-primary/10 transition-colors text-slate-700 dark:text-slate-300">
-              <span className="material-symbols-outlined text-2xl">notifications</span>
-              <span className="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
-            </button>
+        <header className="sticky top-0 z-40 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/5 shadow-sm safe-area-top">
+          <div className="mobile-container py-4 flex items-center justify-between">
+            <Link to="/" className="text-2xl font-black tracking-tighter text-primary">Tiizi</Link>
+            <div className="flex items-center gap-2">
+              <button className="relative p-2.5 rounded-full hover:bg-primary/10 transition-colors text-slate-700 dark:text-slate-300">
+                <span className="material-symbols-outlined text-2xl">notifications</span>
+                <span className="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
+              </button>
+            </div>
           </div>
         </header>
       )}
 
       {/* Main Content Area */}
-      <main className={`flex-1 overflow-y-auto no-scrollbar ${!hideBottomNav ? 'pb-32' : ''}`}>
-        <div className="max-w-xl mx-auto min-h-full">
+      <main className="flex-1 overflow-x-hidden pb-[120px]">
+        <div className="mobile-container">
           {children}
         </div>
       </main>
@@ -110,29 +112,34 @@ const LayoutShell: React.FC<LayoutShellProps> = ({ children, user }) => {
 
       {/* Persistent Bottom Nav */}
       {!hideBottomNav && (
-        <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-[#23170f] border-t border-[#ead9cd] dark:border-white/5 pb-safe pt-2 z-[80] shadow-[0_-8px_30px_rgba(0,0,0,0.06)]">
-          <div className="flex items-center justify-around px-2 h-16 max-w-lg mx-auto relative">
-            <Link to="/" className={`flex flex-1 flex-col items-center justify-center gap-1 transition-all ${isActive('/') ? 'text-primary scale-105' : 'text-[#a16b45] opacity-70'}`}>
-              <span className={`material-symbols-outlined text-2xl ${isActive('/') ? 'active-icon' : ''}`}>home</span>
-              <span className="text-[10px] font-black uppercase tracking-tighter">Home</span>
-            </Link>
-            <Link to="/groups" className={`flex flex-1 flex-col items-center justify-center gap-1 transition-all ${isActive('/groups') ? 'text-primary scale-105' : 'text-[#a16b45] opacity-70'}`}>
-              <span className={`material-symbols-outlined text-2xl ${isActive('/groups') ? 'active-icon' : ''}`}>groups</span>
-              <span className="text-[10px] font-black uppercase tracking-tighter">Groups</span>
-            </Link>
-            <div className="flex-1 flex justify-center -mt-12">
-              <button onClick={() => setIsActionsOpen(!isActionsOpen)} className="w-16 h-16 rounded-full bg-primary text-white shadow-2xl shadow-primary/30 border-[5px] border-white dark:border-[#23170f] flex items-center justify-center transition-all hover:scale-105 active:rotate-90">
+        <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-[#23170f] border-t border-[#ead9cd] dark:border-white/5 z-[80] shadow-[0_-8px_30px_rgba(0,0,0,0.06)] safe-area-bottom">
+          <div className="mobile-container relative">
+            <div className="flex items-center justify-around px-2 py-2 h-16">
+              <Link to="/" className={`flex flex-1 flex-col items-center justify-center gap-1 transition-all ${isActive('/') ? 'text-primary scale-105' : 'text-[#a16b45] opacity-70'}`}>
+                <span className={`material-symbols-outlined text-2xl ${isActive('/') ? 'active-icon' : ''}`}>home</span>
+                <span className="text-[10px] font-black uppercase tracking-tighter">Home</span>
+              </Link>
+              <Link to="/groups" className={`flex flex-1 flex-col items-center justify-center gap-1 transition-all ${isActive('/groups') ? 'text-primary scale-105' : 'text-[#a16b45] opacity-70'}`}>
+                <span className={`material-symbols-outlined text-2xl ${isActive('/groups') ? 'active-icon' : ''}`}>groups</span>
+                <span className="text-[10px] font-black uppercase tracking-tighter">Groups</span>
+              </Link>
+              <Link to="/challenges" className={`flex flex-1 flex-col items-center justify-center gap-1 transition-all ${isActive('/challenges') ? 'text-primary scale-105' : 'text-[#a16b45] opacity-70'}`}>
+                <span className={`material-symbols-outlined text-2xl ${isActive('/challenges') ? 'active-icon' : ''}`}>explore</span>
+                <span className="text-[10px] font-black uppercase tracking-tighter">Discovery</span>
+              </Link>
+              <Link to="/profile" className={`flex flex-1 flex-col items-center justify-center gap-1 transition-all ${isActive('/profile') ? 'text-primary scale-105' : 'text-[#a16b45] opacity-70'}`}>
+                <span className={`material-symbols-outlined text-2xl ${isActive('/profile') ? 'active-icon' : ''}`}>account_circle</span>
+                <span className="text-[10px] font-black uppercase tracking-tighter">Profile</span>
+              </Link>
+            </div>
+            <div className="absolute left-1/2 -translate-x-1/2 -top-8">
+              <button 
+                onClick={() => setIsActionsOpen(!isActionsOpen)} 
+                className="w-16 h-16 rounded-full bg-primary text-white shadow-2xl shadow-primary/30 border-4 border-white dark:border-[#23170f] flex items-center justify-center transition-all hover:scale-105 active:rotate-90"
+              >
                 {isActionsOpen ? <X size={32} strokeWidth={3} /> : <Plus size={32} strokeWidth={3} />}
               </button>
             </div>
-            <Link to="/challenges" className={`flex flex-1 flex-col items-center justify-center gap-1 transition-all ${isActive('/challenges') ? 'text-primary scale-105' : 'text-[#a16b45] opacity-70'}`}>
-              <span className={`material-symbols-outlined text-2xl ${isActive('/challenges') ? 'active-icon' : ''}`}>explore</span>
-              <span className="text-[10px] font-black uppercase tracking-tighter">Discovery</span>
-            </Link>
-            <Link to="/profile" className={`flex flex-1 flex-col items-center justify-center gap-1 transition-all ${isActive('/profile') ? 'text-primary scale-105' : 'text-[#a16b45] opacity-70'}`}>
-              <span className={`material-symbols-outlined text-2xl ${isActive('/profile') ? 'active-icon' : ''}`}>account_circle</span>
-              <span className="text-[10px] font-black uppercase tracking-tighter">Profile</span>
-            </Link>
           </div>
         </nav>
       )}

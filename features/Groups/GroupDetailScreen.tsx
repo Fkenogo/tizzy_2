@@ -109,38 +109,65 @@ const GroupDetailScreen: React.FC<GroupDetailScreenProps> = ({ user }) => {
     }
   });
 
-  // Infinite Query for Group Feed
+  // Paged Feed Cache Implementation
+  const FEED_PAGE_SIZE = 10;
+  const MAX_PAGES_IN_MEMORY = 10; // 100 posts max
+
+  // First page with optional realtime listener
+  const { data: firstPage, isLoading: loadingFirst } = useQuery({
+    queryKey: ['groupFeedFirst', groupId],
+    queryFn: async () => {
+      if (!groupId || !isMember) return [];
+      const q = query(
+        collection(db, 'posts'),
+        where('groupId', '==', groupId),
+        orderBy('createdAt', 'desc'),
+        limit(FEED_PAGE_SIZE)
+      );
+      const snap = await getDocs(q);
+      return snap.docs.map(d => ({ id: d.id, ...d.data() } as Post));
+    },
+    enabled: !!groupId && activeTab === 'feed' && !!group && isMember,
+    staleTime: 2 * 60 * 1000, // 2 minutes for first page
+  });
+
+  // Paginated pages (fetch once + cache)
   const {
-    data: feedData,
+    data: paginatedPages,
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
     isLoading: loadingFeed
   } = useInfiniteQuery({
-    queryKey: ['groupFeed', groupId],
+    queryKey: ['groupFeedPages', groupId],
     queryFn: async ({ pageParam }) => {
       if (!groupId || !isMember) return { posts: [], lastDoc: null };
-      let q = query(
+      const q = query(
         collection(db, 'posts'),
         where('groupId', '==', groupId),
         orderBy('createdAt', 'desc'),
-        limit(10)
+        startAfter(pageParam),
+        limit(FEED_PAGE_SIZE)
       );
-
-      if (pageParam) {
-        q = query(q, startAfter(pageParam));
-      }
-
       const snap = await getDocs(q);
       const posts = snap.docs.map(d => ({ id: d.id, ...d.data() } as Post));
       const lastDoc = snap.docs[snap.docs.length - 1];
-
       return { posts, lastDoc };
     },
-    initialPageParam: null as any,
+    initialPageParam: null,
     getNextPageParam: (lastPage) => lastPage.lastDoc || null,
     enabled: !!groupId && activeTab === 'feed' && !!group && isMember,
+    staleTime: 10 * 60 * 1000, // 10 minutes for cached pages
+    cacheTime: 60 * 60 * 1000, // 1 hour cache
   });
+
+  // Combine first page with paginated pages
+  // Combine first page with paginated pages
+  const feedPosts = React.useMemo(() => {
+    if (!firstPage) return [];
+    const pages = paginatedPages?.pages || [];
+    return [firstPage, ...pages.map(p => p.posts)].flat();
+  }, [firstPage, paginatedPages]);
 
   // Intersection Observer for pagination
   useEffect(() => {
@@ -204,7 +231,7 @@ const GroupDetailScreen: React.FC<GroupDetailScreenProps> = ({ user }) => {
     </div>
   );
 
-  const posts = feedData?.pages.flatMap(page => page.posts) || [];
+  const posts = feedPosts;
 
   return (
     <div className="pb-32 min-h-screen bg-background-light dark:bg-background-dark font-display">

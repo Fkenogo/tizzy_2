@@ -77,18 +77,20 @@ const LogWorkoutScreen: React.FC<LogWorkoutScreenProps> = ({ user }) => {
   if (!challenge) return <div className="p-12 text-center">Challenge not found.</div>;
 
   return (
-    <div className="p-6 pb-32 space-y-8 min-h-screen bg-white">
-      <div className="flex items-center gap-4">
-        <button onClick={() => navigate(-1)} className="p-2 text-slate-400">
-          <ChevronLeft size={24} />
-        </button>
-        <div>
-          <h1 className="text-2xl font-black text-slate-900">Log Workout</h1>
-          <p className="text-sm font-bold text-primary-600">{challenge.title}</p>
+    <div className="min-h-screen bg-white pb-32">
+      <div className="px-6 pt-6 pb-4">
+        <div className="flex items-center gap-4">
+          <button onClick={() => navigate(-1)} className="p-2 text-slate-400">
+            <ChevronLeft size={24} />
+          </button>
+          <div>
+            <h1 className="text-2xl font-black text-slate-900">Log Workout</h1>
+            <p className="text-sm font-bold text-primary-600">{challenge.title}</p>
+          </div>
         </div>
       </div>
 
-      <div className="space-y-6">
+      <div className="px-6 space-y-6">
         {challenge.activities.map(act => (
           <div key={act.exerciseId} className="bg-slate-50 rounded-[32px] p-6 space-y-4">
             <div className="flex justify-between items-center">

@@ -4,19 +4,12 @@ import { db } from '../../lib/firebase';
 import { UserDoc } from '../../types';
 import { ChevronRight, Camera, CheckCircle } from 'lucide-react';
 import { format, isValid, parseISO } from 'date-fns';
+import { useOnboardingData } from '../../src/hooks/useOnboardingData';
 
 interface OnboardingScreenProps {
   user: UserDoc | null;
 }
 
-const exerciseInterests = ["Running", "Weightlifting", "Yoga", "HIIT", "Cycling", "Swimming", "Pilates", "Hiking"];
-const wellnessGoals = [
-  { id: 'weight-loss', title: 'Weight Loss', desc: 'Focus on calorie deficit and fat burning', icon: 'monitor_weight' },
-  { id: 'build-muscle', title: 'Build Muscle', desc: 'Hypertrophy and strength training focus', icon: 'exercise' },
-  { id: 'flexibility', title: 'Improve Flexibility', desc: 'Stretching and mobility routine', icon: 'self_improvement' },
-  { id: 'mental-health', title: 'Mental Health & Stress Relief', desc: 'Mindful movement and regular activity', icon: 'psychology' },
-  { id: 'accountability', title: 'Accountability & Routine', desc: 'Build consistent daily habits', icon: 'group' },
-];
 
 const OnboardingScreen: React.FC<OnboardingScreenProps> = ({ user }) => {
   const [step, setStep] = useState(1);
@@ -34,6 +27,9 @@ const OnboardingScreen: React.FC<OnboardingScreenProps> = ({ user }) => {
     showBirthdayToFriends: true,
     searchable: true
   });
+
+  // Fetch onboarding data from backend
+  const { exerciseInterests, wellnessGoals, loading } = useOnboardingData();
 
   const handleFinish = async () => {
     if (!user) return;
@@ -201,16 +197,16 @@ const OnboardingScreen: React.FC<OnboardingScreenProps> = ({ user }) => {
               <div className="flex flex-wrap gap-3">
                 {exerciseInterests.map(interest => (
                   <button 
-                    key={interest}
-                    onClick={() => toggleInterest(interest)}
+                    key={interest.id}
+                    onClick={() => toggleInterest(interest.name)}
                     className={`px-5 py-2.5 rounded-full font-medium flex items-center gap-2 transition-all border-2 ${
-                      selectedInterests.includes(interest) 
+                      selectedInterests.includes(interest.name) 
                       ? 'bg-primary text-white border-primary shadow-lg' 
                       : 'bg-white dark:bg-white/5 border-primary/10 text-slate-600 dark:text-slate-300'
                     }`}
                   >
-                    <span>{interest}</span>
-                    {selectedInterests.includes(interest) && <CheckCircle size={14} />}
+                    <span>{interest.name}</span>
+                    {selectedInterests.includes(interest.name) && <CheckCircle size={14} />}
                   </button>
                 ))}
               </div>

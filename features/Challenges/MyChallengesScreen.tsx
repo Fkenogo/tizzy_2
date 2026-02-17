@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Bell, SlidersHorizontal, ArrowRight, Users, Clock, Plus, Rocket } from 'lucide-react';
@@ -50,10 +49,59 @@ const MyChallengesScreen: React.FC = () => {
     { id: 'mobility', title: 'Morning Mobility', time: 'Last seen 1d ago', image: 'https://images.unsplash.com/photo-1552196564-972b2c9f7272?auto=format&fit=crop&q=80&w=200' }
   ];
 
+  // Suggested Challenges data
+  const suggestedChallenges = [
+    {
+      id: 'beginner-starter',
+      title: 'Beginner Fitness Starter',
+      description: 'Perfect for those new to fitness. Build strength and endurance gradually.',
+      duration: '30 days',
+      difficulty: 'Beginner',
+      image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=400',
+      color: 'from-emerald-500 to-emerald-600'
+    },
+    {
+      id: 'weight-loss',
+      title: 'Weight Loss Challenge',
+      description: 'Burn fat and build lean muscle with this comprehensive program.',
+      duration: '45 days',
+      difficulty: 'Intermediate',
+      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400',
+      color: 'from-blue-500 to-blue-600'
+    },
+    {
+      id: 'strength-builder',
+      title: 'Strength Builder',
+      description: 'Build serious strength with progressive overload principles.',
+      duration: '60 days',
+      difficulty: 'Advanced',
+      image: 'https://images.unsplash.com/photo-1541534741688-6078c64b5903?auto=format&fit=crop&q=80&w=400',
+      color: 'from-purple-500 to-purple-600'
+    },
+    {
+      id: 'flexibility',
+      title: 'Flexibility & Mobility',
+      description: 'Improve range of motion and reduce injury risk.',
+      duration: '21 days',
+      difficulty: 'All Levels',
+      image: 'https://images.unsplash.com/photo-1552196564-972b2c9f7272?auto=format&fit=crop&q=80&w=400',
+      color: 'from-orange-500 to-orange-600'
+    },
+    {
+      id: 'cardio-endurance',
+      title: 'Cardio Endurance',
+      description: 'Boost your cardiovascular health and stamina.',
+      duration: '30 days',
+      difficulty: 'Intermediate',
+      image: 'https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&q=80&w=400',
+      color: 'from-red-500 to-red-600'
+    }
+  ];
+
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen pb-40">
+    <div className="min-h-screen bg-background-light dark:bg-background-dark max-w-[480px] mx-auto">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-6 pt-6 pb-4">
+      <header className="sticky top-0 z-30 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md mobile-container pt-6 pb-4">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-3xl font-black tracking-tight text-[#1d130c] dark:text-white">Discovery</h1>
           <div className="flex gap-2">
@@ -82,7 +130,7 @@ const MyChallengesScreen: React.FC = () => {
 
       <main className="space-y-8 pt-4">
         {/* Hero Banner */}
-        <section className="px-6">
+        <section className="mobile-container">
           <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-primary to-[#ff9100] p-8 text-white shadow-xl shadow-primary/20">
             <div className="relative z-10 max-w-[65%] space-y-4">
               <p className="text-[10px] font-black uppercase tracking-widest opacity-90">Exercise Library</p>
@@ -104,18 +152,18 @@ const MyChallengesScreen: React.FC = () => {
 
         {/* Popular Now */}
         <section>
-          <div className="flex items-center justify-between px-6 mb-4">
+          <div className="flex items-center justify-between mobile-container mb-4">
             <h3 className="text-xl font-black flex items-center gap-2 tracking-tight">
               Popular Now
               <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
             </h3>
             <button className="text-primary text-xs font-black uppercase tracking-widest">See all</button>
           </div>
-          <div className="flex gap-4 overflow-x-auto px-6 no-scrollbar snap-x snap-mandatory pb-4">
+          <div className="flex flex-col gap-4 mobile-container pb-4">
             {popularChallenges.map(challenge => (
               <div 
                 key={challenge.id} 
-                className="min-w-[280px] snap-center bg-white dark:bg-[#322319] rounded-[32px] overflow-hidden shadow-sm border border-black/5 dark:border-white/5 active:scale-95 transition-transform"
+                className="bg-white dark:bg-[#322319] rounded-[32px] overflow-hidden shadow-sm border border-black/5 dark:border-white/5 active:scale-95 transition-transform"
               >
                 <div 
                   className="h-40 bg-cover bg-center" 
@@ -137,8 +185,65 @@ const MyChallengesScreen: React.FC = () => {
           </div>
         </section>
 
+        {/* Suggested Challenges */}
+        <section>
+          <div className="flex items-center justify-between mobile-container mb-4">
+            <h3 className="text-xl font-black flex items-center gap-2 tracking-tight">
+              <span className="material-symbols-outlined text-primary">rocket</span>
+              Suggested Challenges
+            </h3>
+            <button 
+              onClick={() => navigate('/suggested-challenges')}
+              className="text-primary text-xs font-black uppercase tracking-widest flex items-center gap-1"
+            >
+              View all
+              <span className="material-symbols-outlined text-xs">arrow_forward</span>
+            </button>
+          </div>
+          <div className="overflow-x-auto -mx-mobile px-mobile pb-4">
+            <div className="flex gap-4 pl-6">
+              {suggestedChallenges.map(challenge => (
+                <div 
+                  key={challenge.id} 
+                  className="flex-shrink-0 w-64 bg-white dark:bg-[#322319] rounded-[24px] overflow-hidden shadow-sm border border-black/5 dark:border-white/5 active:scale-95 transition-transform group cursor-pointer"
+                  onClick={() => navigate(`/suggested-challenges/${challenge.id}`)}
+                >
+                  <div className="relative">
+                    <div 
+                      className="h-32 bg-cover bg-center" 
+                      style={{ backgroundImage: `url('${challenge.image}')` }}
+                    ></div>
+                    <div className={`absolute inset-0 bg-gradient-to-t ${challenge.color} opacity-60`}></div>
+                    <div className="absolute bottom-3 left-3">
+                      <span className="text-xs font-black text-white uppercase tracking-widest bg-black/30 px-2 py-1 rounded-full">
+                        {challenge.difficulty}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h4 className="font-black text-base leading-tight text-slate-900 dark:text-white mb-2">
+                      {challenge.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-3 line-clamp-2">
+                      {challenge.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-black text-primary uppercase tracking-widest">
+                        {challenge.duration}
+                      </span>
+                      <button className="bg-primary text-white px-3 py-1.5 rounded-full text-xs font-black shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                        Quick Start
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Starting Soon */}
-        <section className="px-6">
+        <section className="mobile-container">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-xl font-black tracking-tight">Starting Soon</h3>
             <button className="text-primary text-xs font-black uppercase tracking-widest">View calendar</button>
@@ -169,23 +274,27 @@ const MyChallengesScreen: React.FC = () => {
 
         {/* Recently Viewed */}
         <section className="pb-12">
-          <div className="flex items-center justify-between px-6 mb-4">
-            <h3 className="text-xl font-black tracking-tight">Recently Viewed</h3>
-            <button className="text-primary text-xs font-black uppercase tracking-widest">Clear history</button>
+          <div className="mobile-container mb-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-black tracking-tight">Recently Viewed</h3>
+              <button className="text-primary text-xs font-black uppercase tracking-widest">Clear history</button>
+            </div>
           </div>
-          <div className="flex gap-6 overflow-x-auto px-6 no-scrollbar">
-            {recentlyViewed.map(item => (
-              <div key={item.id} className="min-w-[140px] group cursor-pointer">
-                <div 
-                  className="aspect-square rounded-[24px] bg-cover bg-center mb-3 shadow-md relative overflow-hidden ring-4 ring-white dark:ring-[#322319] group-active:scale-95 transition-transform" 
-                  style={{ backgroundImage: `url('${item.image}')` }}
-                >
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+          <div className="overflow-x-auto -mx-mobile px-mobile">
+            <div className="flex gap-6 pb-4">
+              {recentlyViewed.map(item => (
+                <div key={item.id} className="min-w-[140px] group cursor-pointer">
+                  <div 
+                    className="aspect-square rounded-[24px] bg-cover bg-center mb-3 shadow-md relative overflow-hidden ring-4 ring-white dark:ring-[#322319] group-active:scale-95 transition-transform" 
+                    style={{ backgroundImage: `url('${item.image}')` }}
+                  >
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                  </div>
+                  <p className="text-sm font-black text-slate-900 dark:text-white truncate leading-tight">{item.title}</p>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{item.time}</p>
                 </div>
-                <p className="text-sm font-black text-slate-900 dark:text-white truncate leading-tight">{item.title}</p>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{item.time}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
       </main>
